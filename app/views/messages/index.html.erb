@@ -13,10 +13,20 @@
 </div>
 
 <%= form_for(@message) do |f| %>
-  名前:
-  <%= f.text_field :name %>
-
-  内容:
-  <%= f.text_field :body %>
+  <h3>メッセージ登録フォーム</h3>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    名前
+    </div>
+    <div class="panel-body">
+    <%= f.text_field :name, :class => "form-control" %>
+    </div>
+    <div class="panel-heading">
+    内容
+    </div>
+    <div class="panel-body">
+    <%= f.text_area :body, :size => "50x10", :class => "form-control" %>
+    </div>
+  </div>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
